@@ -35,7 +35,8 @@ const hostConfig = {
   prepareUpdate(_domElement, _oldProps, _newProps) {
     return {};
   },
-  resetAfterCommit: (_parent) => {
+  resetAfterCommit: (parent) => {
+    parent.render()
   },
   shouldSetTextContent: (_type, _props) => {
     return false;
