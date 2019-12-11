@@ -1,5 +1,5 @@
 ## Warning
-This is super incomplete. Styling isn't supported in this version yet.
+This is super incomplete. Styling isn't fully supported in this version yet.
 
 
 Usage Example:
