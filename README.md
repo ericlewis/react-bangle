@@ -10,8 +10,8 @@ import Base from 'react-bangle/elements/Base';
 
 class Root extends Base {
   render() {
-    // .s("Hello World!", 10, 0)
-    console.log(super.render())
+    // g.s("Hello World!", 10, 0)
+    console.log(`g${super.render()}`)
   }
 }
 
