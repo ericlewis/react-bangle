@@ -1,0 +1,27 @@
+{
+  "name": "react-bangle-lib",
+  "version": "1.0.0",
+  "description": "Naive renderer to output bangle.js commands from react",
+  "main": "renderer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericlewis/react-bangle.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "ericlewis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ericlewis/react-bangle/issues"
+  },
+  "homepage": "https://github.com/ericlewis/react-bangle#readme",
+  "dependencies": {
+    "react-reconciler": "^0.24.0",
+    "scheduler": "^0.18.0",
+    "yoga-layout-prebuilt": "^1.9.3"
+  }
+}
