@@ -10,7 +10,7 @@ export default class Text extends Base {
     }
 
     measureText(width, widthMode, height, heightMode) {
-        return { height: 8 * 2, width: ((this.text || this.props.children).length * 8) * 2 }
+      return { height: 8 * 2, width: ((this.text || this.props.children).length * 6) * 2 }
     }
 
     update({children}) {

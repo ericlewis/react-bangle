@@ -3,8 +3,9 @@ import {
   unstable_scheduleCallback as schedulePassiveEffects,
   unstable_cancelCallback as cancelPassiveEffects
 } from 'scheduler';
-import View from './ViewNode'
-import Text from './TextNode'
+import View from './elements/ViewNode'
+import Text from './elements/TextNode'
+import Root from './elements/RootNode';
 
 const emptyObject = {};
 
@@ -36,7 +37,7 @@ const hostConfig = {
     return {};
   },
   resetAfterCommit: (parent) => {
-    parent.calculateLayout()
+    parent.calculateLayout(240, 240)
     parent.render()
   },
   shouldSetTextContent: (_type, _props) => {
@@ -71,8 +72,9 @@ const hostConfig = {
   cancelPassiveEffects,
 };
 const ReactReconcilerInst = ReactFiberReconciler(hostConfig);
+
 export default {
-  render: (reactElement, domElement, callback) => {
+  render: (reactElement, domElement = new Root(), callback) => {
     if (!domElement._rootContainer) {
       domElement._rootContainer = ReactReconcilerInst.createContainer(domElement, false);
     }
