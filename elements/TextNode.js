@@ -15,29 +15,30 @@ export default class Text extends Base {
 
     update({children}) {
         this.text = children
+        this.markDirty()
     }
 
     appendChild(child) {
-        if (child) {
-          child.parent = this;
-          this.children.push(child);
-          this.markDirty();
-        }
+      if (child) {
+        child.parent = this;
+        this.children.push(child);
+        this.markDirty();
       }
-    
-      removeChild(child) {
-        const index = this.children.indexOf(child);
-    
-        if (index !== -1) {
-          child.parent = null;
-          this.children.splice(index, 1);
-          this.markDirty();
-    
-          child.cleanup();
-        }
+    }
+  
+    removeChild(child) {
+      const index = this.children.indexOf(child);
+  
+      if (index !== -1) {
+        child.parent = null;
+        this.children.splice(index, 1);
+        this.markDirty();
+  
+        child.cleanup();
       }
+    }
 
     render() {
-        return `.s(\`${this.text || this.props.children}\`, ${this.left}, ${this.top})`
+        return `.s(\`${this.text || this.props.children}\`, ${this.left + this.layout.getParent().getComputedLeft()}, ${this.top + this.layout.getParent().getComputedTop()})`
     }
 }

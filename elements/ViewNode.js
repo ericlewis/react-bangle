@@ -2,8 +2,6 @@ import Base from './BaseNode'
 
 export default class View extends Base {
     render(a) {        
-        this.calculateLayout()
-
         let styles = ""
 
         if (this.props.style) {

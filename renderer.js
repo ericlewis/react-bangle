@@ -36,6 +36,7 @@ const hostConfig = {
     return {};
   },
   resetAfterCommit: (parent) => {
+    parent.calculateLayout()
     parent.render()
   },
   shouldSetTextContent: (_type, _props) => {
