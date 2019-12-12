@@ -1,8 +1,8 @@
 {
   "name": "react-bangle-lib",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Naive renderer to output bangle.js commands from react",
-  "main": "renderer.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,5 +23,13 @@
     "react-reconciler": "^0.24.0",
     "scheduler": "^0.18.0",
     "yoga-layout-prebuilt": "^1.9.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "rollup": "^1.27.11",
+    "rollup-plugin-babel": "^4.3.3"
   }
 }

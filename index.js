@@ -4,6 +4,7 @@ import {
   unstable_cancelCallback as cancelPassiveEffects
 } from 'scheduler';
 import View from './elements/ViewNode'
+import Base from './elements/BaseNode'
 import Text from './elements/TextNode'
 import Root from './elements/RootNode';
 
@@ -80,5 +81,6 @@ export default {
     }
 
     return ReactReconcilerInst.updateContainer(reactElement, domElement._rootContainer, null, callback);
-  }
+  },
+  Base
 };
