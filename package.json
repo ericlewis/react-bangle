@@ -1,6 +1,6 @@
 {
   "name": "react-bangle-lib",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Naive renderer to output bangle.js commands from react",
   "main": "dist/index.js",
   "scripts": {
